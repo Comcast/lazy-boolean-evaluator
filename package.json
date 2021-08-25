@@ -1,0 +1,30 @@
+{
+	"name": "lazy-boolean-evaluator",
+	"version": "1.0.4",
+	"description": "",
+	"main": "./public-api.js",
+	"types": "./public-api.d.ts",
+	"scripts": {
+		"format": "prettier --config ./prettier.config.js --ignore-path ./.prettierignore --write \"**/*.\"{ts,js,json,scss,less,css}",
+		"build": "tsc --build --clean && tsc",
+		"publish:npm": "npm run format && npm run build && xcopy package.json \"./dist/package.json\" && cd dist && npm publish && cd ..",
+		"test": "ts-node node_modules/jasmine/bin/jasmine JASMINE_CONFIG_PATH=jasmine.json"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run format"
+		}
+	},
+	"devDependencies": {
+		"@types/jasmine": "^3.5.14",
+		"@types/node": "^14.6.0",
+		"husky": "^4.2.5",
+		"jasmine": "^3.6.2",
+		"prettier": "1.18.2",
+		"ts-node": "^9.0.0",
+		"tslint": "5.20.0",
+		"typescript": "^3.9.7"
+	},
+	"author": "",
+	"license": "ISC"
+}

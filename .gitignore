@@ -1,0 +1,9 @@
+tmp
+working_directory_pulls
+example_config.json
+example_config.ts
+package-lock.json
+**.gitIgnore.**
+
+node_modules
+dist
