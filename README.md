@@ -1,6 +1,6 @@
 # lazy-boolean-evaluator
 
-This API will allow for boolean operations over asynchronous functions which return a Promise<boolean>.  This uses short circuit evaluation.  Useful in situations where performing certain asynchronous actions is conditional on the results of previous asynchronus actions, and thus can be used to optimize by doing the least amount of work necessary.
+This library will allow for boolean operations over asynchronous functions which return a Promise<boolean>.  This uses short circuit evaluation.  Useful in situations where performing certain asynchronous actions is conditional on the results of previous asynchronus actions, and thus can be used to optimize by doing the least amount of work necessary.
   
 ## Background
 Programming languages will evaluate boolean expressions to a single boolean: true && false == false. In the case of the R-Query tool, we needed to take this concept and apply it to async functions which return promises of booleans. This is how that tool is able to filter through input and files based on certain conditions. The below code snipped exemplifies the requirement.
